@@ -1,9 +1,21 @@
 from rest_framework.routers import DefaultRouter
-from .viewsets import *
+from .viewsets import (ClinetGroupViewset,OfficePurchasesViewset,
+SuppliersGroupViewset,ProductGroupViewset,ClientViewset,SupplierViewset,AccountViewset,
+ExpenseCategoryViewset,IncomeCategoryViewset,BankViewset,PaymentMethodViewset,
+RecieveModelViewset,ExpenseModelViewset,SupplierPaymentViewset,
+BalanceSheetViewset,AccountStatementViewset,ProfitViewset,
+TransferModelViewset,ProductViewset,PurchaseProductViewset,PurchaseReturnViewset,
+CompanyProfileViewset,UserProfileViewset)
 
 router= DefaultRouter()
 
 router.register(r'clientgroup',ClinetGroupViewset,base_name='clientgroup'),
+router.register(r'CompanyProfile',CompanyProfileViewset,base_name='CompanyProfile'),
+router.register(r'UserProfile',UserProfileViewset,base_name='UserProfile'),
+router.register(r'BalanceSheet',BalanceSheetViewset,base_name='BalanceSheet'),
+router.register(r'AccountStatement',AccountStatementViewset,base_name='AccountStatement'),
+router.register(r'Profit',ProfitViewset,base_name='Profit'),
+router.register(r'OfficePurchases',OfficePurchasesViewset,base_name='OfficePurchases'),
 router.register(r'suppliergroup',SuppliersGroupViewset,base_name='suppliersgroup'),
 router.register(r'productgroup',ProductGroupViewset,base_name='productgroup'),
 router.register(r'client',ClientViewset,base_name='client'),

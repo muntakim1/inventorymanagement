@@ -23,7 +23,7 @@ class SupplierViewset(viewsets.ModelViewSet):
 
 class AccountViewset(viewsets.ModelViewSet):
     serializer_class=AccountSerializer
-    queryset=Account.objects.all()
+    queryset=AccountModel.objects.all()
 
 class ExpenseCategoryViewset(viewsets.ModelViewSet):
     serializer_class=ExpenseCategorySerializer
@@ -68,3 +68,27 @@ class PurchaseProductViewset(viewsets.ModelViewSet):
 class PurchaseReturnViewset(viewsets.ModelViewSet):
     serializer_class=PurchaseReturnSerializer
     queryset=PurchaseReturn.objects.all()
+
+class OfficePurchasesViewset(viewsets.ModelViewSet):
+    serializer_class=OfficePurchasesSerializer
+    queryset=OfficePurchases.objects.all()
+
+class BalanceSheetViewset(viewsets.ModelViewSet):
+    serializer_class=BalanceSheetSerializer
+    queryset=BalanceSheet.objects.all()
+
+class ProfitViewset(viewsets.ModelViewSet):
+    serializer_class=ProfitSerializer
+    queryset=ProfitModel.objects.all()
+
+class AccountStatementViewset(viewsets.ModelViewSet):
+    serializer_class=AccountStatementSerializer
+    queryset=AccountStatement.objects.all()
+
+class CompanyProfileViewset(viewsets.ModelViewSet):
+    serializer_class=CompanyProfileSerializer
+    queryset=CompanyProfile.objects.all()
+    
+class UserProfileViewset(viewsets.ModelViewSet):
+    serializer_class=UserProfileSerializer
+    queryset=UserProfile.objects.all()

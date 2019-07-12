@@ -1,5 +1,9 @@
 from rest_framework import serializers
-from .models import ClientGroup,SupplierGroup,ProductGroup,Client,Supplier,Account,ExpenseCategoryModel,IncomeCategoryModel,Bank,PaymentMethodModel,RecieveModel,ExpenseModel,SupplierPayment,TransferModel,Product,PurchaseProduct,PurchaseReturn
+from .models import (ClientGroup,SupplierGroup,ProductGroup,OfficePurchases,Client,
+Supplier,AccountModel,ExpenseCategoryModel,IncomeCategoryModel,Bank,PaymentMethodModel,
+RecieveModel,ExpenseModel,SupplierPayment,TransferModel,Product,PurchaseProduct,PurchaseReturn,
+BalanceSheet,AccountStatement,ProfitModel,CompanyProfile,UserProfile)
+
 
 class ClinetGroupSerializer(serializers.ModelSerializer):
     class Meta:
@@ -16,6 +20,31 @@ class ProductGroupSerializer(serializers.ModelSerializer):
         model=ProductGroup
         fields=('id','GroupName')
 
+class BalanceSheetSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=BalanceSheet
+        fields='__all__'
+
+class CompanyProfileSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=CompanyProfile
+        fields='__all__'
+
+class UserProfileSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=UserProfile
+        fields='__all__'
+
+class ProfitSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=ProfitModel
+        fields='__all__'
+
+class AccountStatementSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=AccountStatement
+        fields='__all__'
+
 class ClientSerializer(serializers.ModelSerializer):
     class Meta:
         model=Client
@@ -28,7 +57,7 @@ class SupplierSerializer(serializers.ModelSerializer):
 
 class AccountSerializer(serializers.ModelSerializer):
     class Meta:
-        model=Account
+        model=AccountModel
         fields='__all__'
 
 class ExpenseCategorySerializer(serializers.ModelSerializer):
@@ -84,4 +113,9 @@ class PurchaseProductSerializer(serializers.ModelSerializer):
 class PurchaseReturnSerializer(serializers.ModelSerializer):
     class Meta:
         model=PurchaseReturn
+        fields='__all__'
+
+class OfficePurchasesSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=OfficePurchases
         fields='__all__'
