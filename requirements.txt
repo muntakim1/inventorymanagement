@@ -1,0 +1,12 @@
+django
+djongo
+django-countries
+django-phonenumber-field
+phonenumbers
+pillow
+djangorestframework
+djangorestframework-jwt
+djangorestframework_simplejwt
+markdown       
+django-filter
+djoser
